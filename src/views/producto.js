@@ -13,7 +13,7 @@ const ProductScreen = {
         
         return `<div class="wrapper">
         <div class="product-img">
-          <img src="${producto.url_image}" height="420" width="327">
+          <img src="${producto.url_image}" class="imagen">
         </div>
         <div class="product-info">
           <div class="product-text">
