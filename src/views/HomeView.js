@@ -17,7 +17,7 @@ const HomeScreen = {
             `
             <div class="content">
               <img class="imagen"src="${producto.url_image}">
-              <h3>${producto.name}</h3>
+              <h3 class="title-producto">${producto.name}</h3>
               ${producto.discount ? `<h6 style="display:inline; font-family: "Homer Simpson UI";"> Precio : $ ${producto.price} </h6> <h4 style="font-size:20px; color: #39b54a; display:inline;  ">  ${producto.discount}%OFF</h4>` : `<h6> Precio: $ ${producto.price} </h6>` }
               
               <ul>
