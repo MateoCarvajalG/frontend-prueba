@@ -133,7 +133,14 @@ body{
       .product-img img{
         height: 240px;
       }
+
+      .content img {
+        width: 100px;
+        height: 100px;
+      }
     }
+
+   
     .imagen{
 
       height: 420px;
