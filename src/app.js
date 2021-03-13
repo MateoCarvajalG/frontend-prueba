@@ -2,13 +2,15 @@ import HomeScreen from './views/HomeView.js'
 import ProductScreen from './views/producto.js'
 import falloScreen from './views/fallo.js'
 import SearchScreen from './views/search.js'
+import listporcategoryScreen from './views/listPerCategory.js'
 import{parseRequestURL} from './utils.js'
 
 
 const routes ={
     "/": HomeScreen,
     "/product/:id": ProductScreen,
-    "/search": SearchScreen
+    "/search": SearchScreen,
+    "/categoria/:id" : listporcategoryScreen
 }
 const router = async () =>{
     const request = parseRequestURL();

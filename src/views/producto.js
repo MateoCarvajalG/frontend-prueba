@@ -5,7 +5,7 @@ const ProductScreen = {
 
     render: async () =>{
       const request = parseRequestURL();
-        const resulttext = await fetch('http://localhost:3000/productos/product/:'+ request.id ,{
+        const resulttext = await fetch('https://backend-prueba-bsale.herokuapp.com/productos/product/:'+ request.id ,{
         method: 'GET',
         });
         if(resulttext.ok){

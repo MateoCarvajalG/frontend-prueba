@@ -1,18 +1,17 @@
 import {parseRequestURL} from '../utils.js'
 
-const SearchScreen = {
+const listporcategoryScreen = {
+
     render: async () =>{
-        const request = parseRequestURL();
-        console.log(request)
-        const url = window.location.search.split("=")
-        console.log(url)
-        const resulttext = await fetch('https://backend-prueba-bsale.herokuapp.com/productos/search/'+url[1].replace("+", " "),{
+      const request = parseRequestURL();
+      console.log(request)
+      console.log(request.id)
+        const resulttext = await fetch('https://backend-prueba-bsale.herokuapp.com/productos/categoria/'+ request.id ,{
         method: 'GET',
         });
-        if (resulttext.ok){
+        if(resulttext.ok){
             const productos = await resulttext.json()
-            if(productos.length > 0 ){
-            return productos.map(producto =>
+        return  productos.map(producto =>
             `
             <div class="content">
               <img class="imagen"src="${producto.url_image}">
@@ -30,14 +29,7 @@ const SearchScreen = {
             </div>
             `    
             ).join('')
-        }else if(productos.length === 0){
-            return`<h2> No se encontraron coincidencias</h2>`
         }
-        }else {
-           return `<h2> No se logro cargar correctamente los productos</h2>`
-        }
-        
     }
 }
-
-export default SearchScreen
+export default listporcategoryScreen;

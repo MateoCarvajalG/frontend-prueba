@@ -8,7 +8,7 @@
 //     }}
 const HomeScreen = {
     render: async () =>{
-        const resulttext = await fetch('http://localhost:3000/productos/list',{
+        const resulttext = await fetch('https://backend-prueba-bsale.herokuapp.com/productos/list',{
         method: 'GET',
         });
         if (resulttext.ok){
